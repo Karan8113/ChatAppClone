@@ -1,0 +1,78 @@
+.main-container-message{
+    width: 70%;
+    height: 100vh;
+    background-color:whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+
+.topSenderCard{
+    width: 100%;
+    height: 110px;
+    background-color:rgb(59, 110, 123);
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 40px;
+    padding: 10px;
+    
+}
+
+.profileSenderCard{
+    width: 10%;
+    height: 100%;
+    margin-left: 20px;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content:left ;
+    background-color: aliceblue;
+    
+    
+}
+
+.profileSenderCard img{
+    width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the container */
+  object-position: center; /* Center the image within the container */
+  border-radius: 50%; 
+}
+
+.profileSenderName{
+    display: flex; /* Use Flexbox */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  color: white; /* Text color */
+  font-size: 38px; /
+}
+
+
+.sendMessageInput{
+    height: 55px;
+    width: 100%;
+
+    position: relative;
+    display: inline-block;
+}
+
+.msgIp{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(59, 56, 56);
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 10px;
+    outline:none;
+}
+
+.sendBtn{
+    position: absolute;
+    right: 10px;
+    bottom: 9px;
+    font-size: 32px;
+    
+
+}
