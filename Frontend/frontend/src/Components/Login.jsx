@@ -19,7 +19,7 @@ const Login = () => {
 
   const onSubmitHandler = async(e) => {
     e.preventDefault();
-    console.log(user);
+    // console.log(user);
 
     try {
       const res = await axios.post("http://localhost:8080/api/v1/user/login",
@@ -30,15 +30,17 @@ const Login = () => {
         },
         withCredentials:true
       }) 
-      Navigate("/");
-      toast.success("Login Succesfull..");
+      
       // console.log(res.data.profilePhoto);
       dispatch(setAuthUser(res.data));
       localStorage.setItem("authUser",JSON.stringify(res.data))
       
+      Navigate("/home");
+      toast.success("Login Succesfull..");
+      
     } catch (error) {
       toast.error(error.response.data.message);
-      console.log(error);
+      console.log("error  ",error);
     }
 
     setUser({

@@ -6,12 +6,18 @@ import cookieParser from "cookie-parser";
 import messageRoutes from "./routes/messageRoutes.js";
 import cors from "cors"
 import { app, server } from "./Socket/Socketio.js";
+import path from "path"
+
 dotenv.config({})
 
 
 
 
 const PORT=process.env.PORT||5000;
+
+const __dirname = path.resolve();
+
+console.log(__dirname);
 
 // middlewares
 app.use(express.urlencoded({extended:true}))
@@ -27,6 +33,11 @@ app.use(cors(corsOption))
 // Routes
 app.use("/api/v1/user",userRoutes)
 app.use("/api/v1/message",messageRoutes)
+
+app.use(express.static(path.join(__dirname,"/Frontend/frontend/dist")));
+app.get("*",(req,res)=>{
+    res.sendFile(path.resolve(__dirname,"Frontend","frontend","dist","index.html"));
+})
 
 server.listen(PORT,()=>{
     connectDB();
