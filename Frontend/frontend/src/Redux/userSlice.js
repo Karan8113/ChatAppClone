@@ -5,9 +5,9 @@ const userSlice = createSlice({
   initialState: {
     // authUser means only authenticated user can able to access the data
     authUser: null,
-    otherUsers: null,
-    selectedUsers: null,
-    onlineUsers:null,
+    otherUsers: [],
+    selectedUsers: [],
+    onlineUsers:[],
   },
   reducers: {
     // using reducers state and action we can able to change the initial state of object
