@@ -27,7 +27,7 @@ const MessageContainer = () => {
 
     try {
       const res = await axios.post(
-        `http://localhost:8080/api/v1/message/send/${selectedUsers?._id}`,
+        `https://chatappclone-eza8.onrender.com/api/v1/message/send/${selectedUsers?._id}`,
         { message: ipMessage }, // Make sure the key is consistent with your backend
         {
           headers: {

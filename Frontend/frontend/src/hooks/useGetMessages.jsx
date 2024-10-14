@@ -12,7 +12,7 @@ const useGetMessages = () => {
         const fetchMessages = async()=>{
             try {
                 axios.defaults.withCredentials = true;
-                const res = await axios.get(`http://localhost:8080/api/v1/message/${selectedUsers?._id}`);
+                const res = await axios.get(`https://chatappclone-eza8.onrender.com/api/v1/message/${selectedUsers?._id}`);
                 //log(res)
                 dispatch(setMessages(res.data.conversation.message))
 

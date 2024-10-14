@@ -22,7 +22,7 @@ export const SocketContextProvider = ({children})=>{
     useEffect(()=>{
         let socket;
             if(authUser){
-                socket = io("http://localhost:8080",{
+                socket = io("https://chatappclone-eza8.onrender.com",{
                     query:{
                         userId:authUser._id,
                     }

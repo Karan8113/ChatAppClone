@@ -25,7 +25,7 @@ const Signup = () => {
     try {
       console.log(user);
       const res = await axios.post(
-        "http://localhost:8080/api/v1/user/register",
+        "https://chatappclone-eza8.onrender.com/api/v1/user/register",
         user,
         {
           headers: { 
